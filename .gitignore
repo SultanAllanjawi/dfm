@@ -1,0 +1,49 @@
+# --- Legacy Streamlit prototype (not part of the deployed web app) ---
+# Scoped to root only (/) since server/ has its own real copies of some of
+# these filenames that must stay tracked.
+/app.py
+/app.py.*
+/data_manager.py
+/data_manager.py.*
+/feature_engine.py
+/feature_engine.py.*
+/model_engine.py
+/model_engine.py.*
+/persistence.py
+/requirements.txt
+/Persistence
+/Solana Historical Data*.csv
+/data/
+/.streamlit/
+
+# --- Node (web/) ---
+web/node_modules/
+web/.next/
+web/*.tsbuildinfo
+web/next-env.d.ts
+
+# --- Python (server/) ---
+server/venv/
+**/__pycache__/
+*.pyc
+
+# --- Env files (secrets) ---
+.env
+.env.local
+server/.env
+web/.env.local
+
+# --- Runtime data (regenerated from yfinance / user uploads) ---
+server/data/
+server/uvicorn.log
+*.log
+
+# --- OS / editor ---
+.DS_Store
+*.suo
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# --- Claude Code local tooling (not part of the app) ---
+/.claude/

@@ -1,0 +1,314 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-geist-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-buy: var(--buy);
+  --color-sell: var(--sell);
+  --color-warn: var(--warn);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #070812;
+  --foreground: #E2E8F0;
+  --card: #10121C;
+  --card-foreground: #E2E8F0;
+  --popover: #10121C;
+  --popover-foreground: #E2E8F0;
+  --primary: #2DD4BF;
+  --primary-foreground: #06251F;
+  --secondary: #1A1E2B;
+  --secondary-foreground: #E2E8F0;
+  --muted: #10121C;
+  --muted-foreground: #94A3B8;
+  --accent: #1A1E2B;
+  --accent-foreground: #E2E8F0;
+  --destructive: #FB7185;
+  --border: #1E2333;
+  --input: #1E2333;
+  --ring: #2DD4BF80;
+  --chart-1: #2DD4BF;
+  --chart-2: #F59E0B;
+  --chart-3: #A78BFA;
+  --chart-4: #FB7185;
+  --chart-5: #64748B;
+  --radius: 0.75rem;
+  --sidebar: #0B0D18;
+  --sidebar-foreground: #E2E8F0;
+  --sidebar-primary: #2DD4BF;
+  --sidebar-primary-foreground: #06251F;
+  --sidebar-accent: #1A1E2B;
+  --sidebar-accent-foreground: #E2E8F0;
+  --sidebar-border: #1E2333;
+  --sidebar-ring: #2DD4BF80;
+  --buy: #2DD4BF;
+  --sell: #FB7185;
+  --warn: #F59E0B;
+  --surface: #10121C;
+  --surface-2: #161B2C;
+}
+
+.dark {
+  --background: #070812;
+  --foreground: #E2E8F0;
+  --card: #10121C;
+  --card-foreground: #E2E8F0;
+  --popover: #10121C;
+  --popover-foreground: #E2E8F0;
+  --primary: #2DD4BF;
+  --primary-foreground: #06251F;
+  --secondary: #1A1E2B;
+  --secondary-foreground: #E2E8F0;
+  --muted: #10121C;
+  --muted-foreground: #94A3B8;
+  --accent: #1A1E2B;
+  --accent-foreground: #E2E8F0;
+  --destructive: #FB7185;
+  --border: #1E2333;
+  --input: #1E2333;
+  --ring: #2DD4BF80;
+  --chart-1: #2DD4BF;
+  --chart-2: #F59E0B;
+  --chart-3: #A78BFA;
+  --chart-4: #FB7185;
+  --chart-5: #64748B;
+  --sidebar: #0B0D18;
+  --sidebar-foreground: #E2E8F0;
+  --sidebar-primary: #2DD4BF;
+  --sidebar-primary-foreground: #06251F;
+  --sidebar-accent: #1A1E2B;
+  --sidebar-accent-foreground: #E2E8F0;
+  --sidebar-border: #1E2333;
+  --sidebar-ring: #2DD4BF80;
+  --buy: #2DD4BF;
+  --sell: #FB7185;
+  --warn: #F59E0B;
+  --surface: #10121C;
+  --surface-2: #161B2C;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(45, 212, 191, 0.08), transparent),
+      radial-gradient(ellipse 70% 50% at center, rgba(167, 139, 250, 0.11), transparent);
+    background-position: 0 0, 15% 20%;
+    background-attachment: fixed;
+    animation: ambient-drift 16s ease-in-out infinite;
+  }
+  html {
+    @apply font-sans;
+  }
+  /* Base UI marks inactive Tabs panels `inert` (removes interactivity/focus) but
+     doesn't visually hide them — that's left to consumer CSS. Scoped to tabs
+     content only so it doesn't affect Dialog/Popover, which rely on `inert`
+     staying visible (dimmed background) while open. */
+  [data-slot="tabs-content"][inert] {
+    display: none;
+  }
+  /* shadcn's generated Dialog/Popover/Select popups use tw-animate-css keyframe
+     classes (animate-in/animate-out) driven by data-open/data-closed, but Base
+     UI's exit-animation detection here never resolves the closing transition —
+     the popup gets stuck fully visible with data-closed set indefinitely.
+     Force-hide once closed; this trades the exit animation for the popup
+     actually being closeable. */
+  [data-closed] {
+    display: none !important;
+  }
+}
+
+@layer utilities {
+  .live-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--buy);
+    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.6);
+    animation: live-pulse 2s infinite;
+  }
+  /* Same live-pulse rhythm, but color-aware via --dot-color so it can match
+     any stat's own accent instead of always pulsing teal. */
+  .spark-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--dot-color, var(--buy));
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--dot-color, var(--buy)) 55%, transparent);
+    animation: spark-pulse 2s infinite;
+  }
+  .hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--primary) 40%, var(--border));
+    box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.5);
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 999px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  /* animation-name set by class, duration/delay supplied inline per-element —
+     so prefers-reduced-motion can kill the animation via the class alone,
+     without fighting an inline `animation` shorthand. */
+  .grid-drift {
+    animation: grid-drift 14s linear infinite;
+  }
+  .float-y {
+    animation-name: float-y;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  .spin-3d {
+    animation: spin-3d 14s linear infinite;
+  }
+  .pulse-glow {
+    animation-name: pulse-glow;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes live-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(45, 212, 191, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0);
+  }
+}
+
+@keyframes spark-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--dot-color, var(--buy)) 55%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+/* Slow ambient drift so the page background never sits perfectly still —
+   subtle enough to read as "alive" without competing with the data. Only the
+   second (violet) gradient layer moves; the first stays anchored to the header. */
+@keyframes ambient-drift {
+  0%, 100% {
+    background-position: 0 0, 15% 20%;
+  }
+  50% {
+    background-position: 0 0, 80% 40%;
+  }
+}
+
+@keyframes grid-drift {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 0 60px, 60px 0;
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.35);
+  }
+}
+
+@keyframes spin-3d {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+  .grid-drift,
+  .float-y,
+  .pulse-glow,
+  .spin-3d {
+    animation: none !important;
+  }
+}
