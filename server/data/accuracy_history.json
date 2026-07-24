@@ -1,0 +1,125 @@
+{
+  "EMAAR.DFM": [
+    {
+      "timestamp": "2026-07-23T18:38:57.630534+00:00",
+      "filteredAccuracy": 0.8274,
+      "accuracy": 0.7256
+    },
+    {
+      "timestamp": "2026-07-23T21:20:06.482890+00:00",
+      "filteredAccuracy": 0.8286,
+      "accuracy": 0.7256
+    },
+    {
+      "timestamp": "2026-07-23T22:21:09.837679+00:00",
+      "filteredAccuracy": 0.8291,
+      "accuracy": 0.7143
+    },
+    {
+      "timestamp": "2026-07-24T12:28:41.131106+00:00",
+      "filteredAccuracy": 0.8211,
+      "accuracy": 0.7098
+    }
+  ],
+  "DIB.DFM": [
+    {
+      "timestamp": "2026-07-23T18:44:27.086189+00:00",
+      "filteredAccuracy": 0.7951,
+      "accuracy": 0.7075
+    },
+    {
+      "timestamp": "2026-07-23T18:44:31.304272+00:00",
+      "filteredAccuracy": 0.8142,
+      "accuracy": 0.7166
+    },
+    {
+      "timestamp": "2026-07-23T21:20:31.990306+00:00",
+      "filteredAccuracy": 0.8118,
+      "accuracy": 0.7188
+    },
+    {
+      "timestamp": "2026-07-23T21:20:38.680448+00:00",
+      "filteredAccuracy": 0.8151,
+      "accuracy": 0.7302
+    },
+    {
+      "timestamp": "2026-07-23T21:20:45.063908+00:00",
+      "filteredAccuracy": 0.8531,
+      "accuracy": 0.7415
+    },
+    {
+      "timestamp": "2026-07-23T21:20:46.099075+00:00",
+      "filteredAccuracy": 0.8228,
+      "accuracy": 0.7324
+    },
+    {
+      "timestamp": "2026-07-23T22:21:03.798351+00:00",
+      "filteredAccuracy": 0.8111,
+      "accuracy": 0.7324
+    },
+    {
+      "timestamp": "2026-07-24T12:38:34.289459+00:00",
+      "filteredAccuracy": 0.7868,
+      "accuracy": 0.6939
+    }
+  ],
+  "SALIK.DFM": [
+    {
+      "timestamp": "2026-07-23T18:45:55.186271+00:00",
+      "filteredAccuracy": 0.7794,
+      "accuracy": 0.6929
+    },
+    {
+      "timestamp": "2026-07-23T18:45:55.720939+00:00",
+      "filteredAccuracy": 0.7794,
+      "accuracy": 0.7008
+    },
+    {
+      "timestamp": "2026-07-24T12:38:56.534689+00:00",
+      "filteredAccuracy": 0.7625,
+      "accuracy": 0.6406
+    }
+  ],
+  "ENBD.DFM": [
+    {
+      "timestamp": "2026-07-23T18:46:16.692312+00:00",
+      "filteredAccuracy": 0.8167,
+      "accuracy": 0.7143
+    },
+    {
+      "timestamp": "2026-07-23T18:46:18.251931+00:00",
+      "filteredAccuracy": 0.8157,
+      "accuracy": 0.7234
+    },
+    {
+      "timestamp": "2026-07-23T19:47:06.073099+00:00",
+      "filteredAccuracy": 0.8397,
+      "accuracy": 0.7256
+    },
+    {
+      "timestamp": "2026-07-23T20:48:32.768820+00:00",
+      "filteredAccuracy": 0.804,
+      "accuracy": 0.7188
+    },
+    {
+      "timestamp": "2026-07-23T20:49:17.007162+00:00",
+      "filteredAccuracy": 0.8125,
+      "accuracy": 0.7098
+    },
+    {
+      "timestamp": "2026-07-23T21:49:42.270772+00:00",
+      "filteredAccuracy": 0.804,
+      "accuracy": 0.7188
+    },
+    {
+      "timestamp": "2026-07-24T12:38:09.845062+00:00",
+      "filteredAccuracy": 0.8225,
+      "accuracy": 0.724
+    },
+    {
+      "timestamp": "2026-07-24T12:38:11.062056+00:00",
+      "filteredAccuracy": 0.8147,
+      "accuracy": 0.7398
+    }
+  ]
+}

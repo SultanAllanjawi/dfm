@@ -1,0 +1,44 @@
+[
+  {
+    "id": "d4a6e77e-8681-4a91-a1c1-dc9c72e1de8a",
+    "date": "2026-07-23 22:31",
+    "ticker": "EMAAR.DFM",
+    "side": "BUY",
+    "entry": 5.0,
+    "size": 1.0,
+    "tp": 5.6,
+    "sl": 4.9,
+    "status": "Open",
+    "exit": null,
+    "pnl": null,
+    "note": ""
+  },
+  {
+    "id": "978e8e9d-81c8-46fa-b826-c2040ec475aa",
+    "date": "2026-07-24 02:24",
+    "ticker": "EMAAR.DFM",
+    "side": "BUY",
+    "entry": 5.0,
+    "size": 1.0,
+    "tp": 5.6,
+    "sl": 5.4,
+    "status": "Open",
+    "exit": null,
+    "pnl": null,
+    "note": ""
+  },
+  {
+    "id": "8f55b0ee-2fd1-427d-93e7-985c8c8adeca",
+    "date": "2026-07-24 02:24",
+    "ticker": "DIB.DFM",
+    "side": "BUY",
+    "entry": 5.0,
+    "size": 1.0,
+    "tp": 5.6,
+    "sl": 5.4,
+    "status": "Open",
+    "exit": null,
+    "pnl": null,
+    "note": ""
+  }
+]

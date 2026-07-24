@@ -1,0 +1,50 @@
+{
+  "ENBD.DFM": {
+    "signal": "BUY",
+    "entry": 30.18000030517578,
+    "tp": 30.8713,
+    "sl": 29.5578,
+    "timestamp": "2026-07-23T14:12:44.221595+00:00",
+    "status": "ACTIVE"
+  },
+  "DIB.DFM": {
+    "signal": "BUY",
+    "entry": 7.460000038146973,
+    "tp": 7.5789,
+    "sl": 7.353,
+    "timestamp": "2026-07-23T14:12:54.420727+00:00",
+    "status": "HIT_SL"
+  },
+  "DU.DFM": {
+    "signal": "SELL",
+    "entry": 12.100000381469727,
+    "tp": 11.7913,
+    "sl": 12.3778,
+    "timestamp": "2026-07-23T14:13:07.520447+00:00",
+    "status": "ACTIVE"
+  },
+  "DEWA.DFM": {
+    "signal": "SELL",
+    "entry": 2.680000066757202,
+    "tp": 2.6259,
+    "sl": 2.7287,
+    "timestamp": "2026-07-23T14:13:13.766011+00:00",
+    "status": "ACTIVE"
+  },
+  "SALIK.DFM": {
+    "signal": "SELL",
+    "entry": 5.489999771118164,
+    "tp": 5.3862,
+    "sl": 5.5834,
+    "timestamp": "2026-07-23T14:13:48.273241+00:00",
+    "status": "ACTIVE"
+  },
+  "MASQ.DFM": {
+    "signal": "SELL",
+    "entry": 251.0,
+    "tp": 247.0667,
+    "sl": 254.5399,
+    "timestamp": "2026-07-23T14:13:57.072705+00:00",
+    "status": "ACTIVE"
+  }
+}

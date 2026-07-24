@@ -1,0 +1,13 @@
+[
+  {
+    "ticker": "DIB.DFM",
+    "signal": "BUY",
+    "entry": 7.35,
+    "exit": 7.2352,
+    "tp": 7.4776,
+    "sl": 7.2352,
+    "result": "HIT_SL",
+    "pnl_pct": -1.56,
+    "closed_at": "2026-07-24 16:38"
+  }
+]

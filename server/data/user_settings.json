@@ -1,0 +1,5 @@
+{
+  "confidence_thresh": 0.65,
+  "lookback_days": 90,
+  "last_ticker": "EMAAR.DFM"
+}

@@ -33,8 +33,11 @@ server/venv/
 server/.env
 web/.env.local
 
-# --- Runtime data (regenerated from yfinance / user uploads) ---
-server/data/
+# --- Runtime data ---
+# Ticker CSVs/meta/state ARE committed as seed data — Render's free instance
+# needs them present at boot since a live full-history fetch from Yahoo
+# Finance can stall for minutes (or hang forever) from cloud-hosting IPs.
+server/data/uploads/
 server/uvicorn.log
 *.log
 
