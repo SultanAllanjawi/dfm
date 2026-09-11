@@ -56,7 +56,7 @@ def get_price(ticker: str):
 
 
 @router.get("/{ticker}/ohlcv")
-def get_ohlcv(ticker: str, lookback: int = Query(90, ge=5, le=3650)):
+def get_ohlcv(ticker: str, lookback: int = Query(90, ge=5, le=10950)):
     t = _require_ticker(ticker)
     try:
         return {"ticker": t, "bars": signal_engine.get_ohlcv(t, lookback)}

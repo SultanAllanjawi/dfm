@@ -19,6 +19,71 @@
       "timestamp": "2026-07-24T12:28:41.131106+00:00",
       "filteredAccuracy": 0.8211,
       "accuracy": 0.7098
+    },
+    {
+      "timestamp": "2026-07-24T13:35:39.161934+00:00",
+      "filteredAccuracy": 0.8285,
+      "accuracy": 0.6961
+    },
+    {
+      "timestamp": "2026-07-24T15:03:19.264821+00:00",
+      "filteredAccuracy": 0.856,
+      "accuracy": 0.7188
+    },
+    {
+      "timestamp": "2026-07-24T20:23:22.595647+00:00",
+      "filteredAccuracy": 0.8189,
+      "accuracy": 0.7188
+    },
+    {
+      "timestamp": "2026-07-24T20:23:27.139682+00:00",
+      "filteredAccuracy": 0.827,
+      "accuracy": 0.7098
+    },
+    {
+      "timestamp": "2026-07-24T23:51:35.447766+00:00",
+      "filteredAccuracy": 0.8319,
+      "accuracy": 0.712
+    },
+    {
+      "timestamp": "2026-07-24T23:51:39.723079+00:00",
+      "filteredAccuracy": 0.8047,
+      "accuracy": 0.7007
+    },
+    {
+      "timestamp": "2026-07-25T00:57:18.767775+00:00",
+      "filteredAccuracy": 0.8162,
+      "accuracy": 0.7029
+    },
+    {
+      "timestamp": "2026-07-25T00:57:22.313905+00:00",
+      "filteredAccuracy": 0.82,
+      "accuracy": 0.6848
+    },
+    {
+      "timestamp": "2026-07-25T01:30:25.393150+00:00",
+      "filteredAccuracy": 0.8455,
+      "accuracy": 0.749
+    },
+    {
+      "timestamp": "2026-07-25T13:21:04.587065+00:00",
+      "filteredAccuracy": 0.7898,
+      "accuracy": 0.7018
+    },
+    {
+      "timestamp": "2026-07-25T13:21:10.753260+00:00",
+      "filteredAccuracy": 0.7809,
+      "accuracy": 0.6947
+    },
+    {
+      "timestamp": "2026-07-25T20:53:58.487454+00:00",
+      "filteredAccuracy": 0.7816,
+      "accuracy": 0.7035
+    },
+    {
+      "timestamp": "2026-09-11T12:26:25.212834+00:00",
+      "filteredAccuracy": 0.8087,
+      "accuracy": 0.7246
     }
   ],
   "DIB.DFM": [
@@ -61,6 +126,11 @@
       "timestamp": "2026-07-24T12:38:34.289459+00:00",
       "filteredAccuracy": 0.7868,
       "accuracy": 0.6939
+    },
+    {
+      "timestamp": "2026-09-11T12:28:23.982460+00:00",
+      "filteredAccuracy": 0.8308,
+      "accuracy": 0.7211
     }
   ],
   "SALIK.DFM": [
@@ -78,6 +148,26 @@
       "timestamp": "2026-07-24T12:38:56.534689+00:00",
       "filteredAccuracy": 0.7625,
       "accuracy": 0.6406
+    },
+    {
+      "timestamp": "2026-07-24T14:25:47.053210+00:00",
+      "filteredAccuracy": 0.7639,
+      "accuracy": 0.6797
+    },
+    {
+      "timestamp": "2026-07-24T14:25:47.537964+00:00",
+      "filteredAccuracy": 0.7746,
+      "accuracy": 0.7031
+    },
+    {
+      "timestamp": "2026-07-25T13:21:35.120581+00:00",
+      "filteredAccuracy": 0.726,
+      "accuracy": 0.6797
+    },
+    {
+      "timestamp": "2026-07-25T13:21:36.026049+00:00",
+      "filteredAccuracy": 0.7703,
+      "accuracy": 0.6953
     }
   ],
   "ENBD.DFM": [
@@ -120,6 +210,90 @@
       "timestamp": "2026-07-24T12:38:11.062056+00:00",
       "filteredAccuracy": 0.8147,
       "accuracy": 0.7398
+    },
+    {
+      "timestamp": "2026-07-24T13:38:38.871225+00:00",
+      "filteredAccuracy": 0.8167,
+      "accuracy": 0.7195
+    },
+    {
+      "timestamp": "2026-07-24T14:39:38.001859+00:00",
+      "filteredAccuracy": 0.7949,
+      "accuracy": 0.7376
+    },
+    {
+      "timestamp": "2026-07-24T20:24:29.344527+00:00",
+      "filteredAccuracy": 0.824,
+      "accuracy": 0.733
+    },
+    {
+      "timestamp": "2026-07-24T20:24:31.629570+00:00",
+      "filteredAccuracy": 0.7908,
+      "accuracy": 0.7308
+    },
+    {
+      "timestamp": "2026-07-24T20:24:57.023765+00:00",
+      "filteredAccuracy": 0.8243,
+      "accuracy": 0.7036
+    },
+    {
+      "timestamp": "2026-07-24T23:51:50.152085+00:00",
+      "filteredAccuracy": 0.8025,
+      "accuracy": 0.7285
+    },
+    {
+      "timestamp": "2026-07-24T23:51:53.553532+00:00",
+      "filteredAccuracy": 0.8276,
+      "accuracy": 0.7217
+    },
+    {
+      "timestamp": "2026-07-25T00:57:58.207620+00:00",
+      "filteredAccuracy": 0.8213,
+      "accuracy": 0.733
+    },
+    {
+      "timestamp": "2026-07-25T00:58:01.241358+00:00",
+      "filteredAccuracy": 0.8162,
+      "accuracy": 0.7353
+    },
+    {
+      "timestamp": "2026-07-25T01:25:28.032282+00:00",
+      "filteredAccuracy": 0.8172,
+      "accuracy": 0.7143
+    },
+    {
+      "timestamp": "2026-07-25T13:21:25.258435+00:00",
+      "filteredAccuracy": 0.8044,
+      "accuracy": 0.7263
+    },
+    {
+      "timestamp": "2026-07-25T13:21:28.899085+00:00",
+      "filteredAccuracy": 0.8179,
+      "accuracy": 0.7351
+    },
+    {
+      "timestamp": "2026-09-11T12:28:42.921153+00:00",
+      "filteredAccuracy": 0.8266,
+      "accuracy": 0.7228
+    }
+  ],
+  "DEWA.DFM": [
+    {
+      "timestamp": "2026-07-25T20:56:17.213435+00:00",
+      "filteredAccuracy": 0.7079,
+      "accuracy": 0.6596
+    },
+    {
+      "timestamp": "2026-07-25T20:56:18.681696+00:00",
+      "filteredAccuracy": 0.7083,
+      "accuracy": 0.6596
+    }
+  ],
+  "DU.DFM": [
+    {
+      "timestamp": "2026-09-11T12:28:09.558257+00:00",
+      "filteredAccuracy": 0.8207,
+      "accuracy": 0.7053
     }
   ]
 }

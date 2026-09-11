@@ -31,6 +31,14 @@ HIGH    = 0.60
 LOW     = 0.40
 MIN_ACC = 0.55
 SEQ_LEN = 30
+# Data now goes back as far as each ticker's real listing history (see
+# data_manager.py), which is great for feature quality (long-window
+# indicators are no longer NaN-starved near the start) but would otherwise
+# make every model train on a growing pile of rows as history accumulates.
+# Bound the actual train/test split to a fixed recent window so training
+# time stays roughly constant regardless of how far back we fetched —
+# feature engineering upstream still sees the full history either way.
+TRAIN_WINDOW_ROWS = 3000
 
 # ── Activations ───────────────────────────────────────────────────
 def _sig(x):   return 1.0 / (1.0 + np.exp(-np.clip(x, -15, 15)))
@@ -111,7 +119,9 @@ class ModelEngine:
         self.df=df; self.split=split; self._prepare()
 
     def _prepare(self):
-        d=self.df; sp=int(len(d)*self.split)
+        d=self.df
+        if len(d) > TRAIN_WINDOW_ROWS: d = d.tail(TRAIN_WINDOW_ROWS)
+        sp=int(len(d)*self.split)
         if len(d)<100: raise RuntimeError(f"Not enough data: {len(d)} rows. Need ≥100.")
         if len(d)-sp <= SEQ_LEN:
             raise RuntimeError(

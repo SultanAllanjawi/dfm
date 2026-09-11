@@ -5,7 +5,7 @@
     "tp": 30.8713,
     "sl": 29.5578,
     "timestamp": "2026-07-23T14:12:44.221595+00:00",
-    "status": "ACTIVE"
+    "status": "EXPIRED"
   },
   "DIB.DFM": {
     "signal": "BUY",
@@ -21,7 +21,7 @@
     "tp": 11.7913,
     "sl": 12.3778,
     "timestamp": "2026-07-23T14:13:07.520447+00:00",
-    "status": "ACTIVE"
+    "status": "EXPIRED"
   },
   "DEWA.DFM": {
     "signal": "SELL",
@@ -29,14 +29,14 @@
     "tp": 2.6259,
     "sl": 2.7287,
     "timestamp": "2026-07-23T14:13:13.766011+00:00",
-    "status": "ACTIVE"
+    "status": "EXPIRED"
   },
   "SALIK.DFM": {
-    "signal": "SELL",
-    "entry": 5.489999771118164,
-    "tp": 5.3862,
-    "sl": 5.5834,
-    "timestamp": "2026-07-23T14:13:48.273241+00:00",
+    "signal": "BUY",
+    "entry": 5.46999979019165,
+    "tp": 5.5657,
+    "sl": 5.3839,
+    "timestamp": "2026-07-25T13:21:35.113577+00:00",
     "status": "ACTIVE"
   },
   "MASQ.DFM": {
@@ -45,6 +45,14 @@
     "tp": 247.0667,
     "sl": 254.5399,
     "timestamp": "2026-07-23T14:13:57.072705+00:00",
+    "status": "ACTIVE"
+  },
+  "EMAAR.DFM": {
+    "signal": "SELL",
+    "entry": 10.899999618530273,
+    "tp": 10.7589,
+    "sl": 11.027,
+    "timestamp": "2026-09-11T12:26:25.212834+00:00",
     "status": "ACTIVE"
   }
 }

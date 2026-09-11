@@ -114,10 +114,10 @@ class DataManager:
                 self._save(merged)
                 self._save_meta()
                 clean = self._clean(merged)
-                return clean.tail(7500).reset_index(drop=True) if len(clean) > 7500 else clean
+                return clean.tail(8200).reset_index(drop=True) if len(clean) > 8200 else clean
             elif cached is not None and len(cached) >= 80:
                 clean = self._clean(cached)
-                return clean.tail(7500).reset_index(drop=True) if len(clean) > 7500 else clean
+                return clean.tail(8200).reset_index(drop=True) if len(clean) > 8200 else clean
             raise RuntimeError(
                 f"Could not load data for {self.ticker}. "
                 f"{'This ticker has no free auto-fetch source — upload a CSV.' if self.ticker in UAE_NO_AUTO_FETCH else 'Try again or upload a CSV.'}"
@@ -125,7 +125,7 @@ class DataManager:
 
         if cached is not None and len(cached) >= 80:
             clean = self._clean(cached)
-            return clean.tail(7500).reset_index(drop=True) if len(clean) > 7500 else clean
+            return clean.tail(8200).reset_index(drop=True) if len(clean) > 8200 else clean
 
         raise RuntimeError(f"Could not load data for {self.ticker}. Please upload a CSV.")
 
@@ -138,16 +138,22 @@ class DataManager:
     def _yahoo_uae(self):
         """Fetch UAE DFM stocks straight from Yahoo Finance's chart endpoint.
 
-        IMPORTANT: use range=10y, never range=max — Yahoo silently drops to
-        MONTHLY granularity when range=max is combined with interval=1d, which
-        was quietly starving newer listings (e.g. SALIK, DEWA, both IPO'd 2022)
-        of enough rows to clear the pipeline's minimums."""
+        IMPORTANT: never use range=max — Yahoo silently drops to MONTHLY
+        granularity when range=max is combined with interval=1d, which was
+        quietly starving newer listings (e.g. SALIK, DEWA, both IPO'd 2022)
+        of enough rows to clear the pipeline's minimums. There is also no
+        "30y"/"20y" range token (Yahoo's enum stops at 10y, then jumps to
+        max), so to reach further back than 10y while keeping interval=1d
+        we pass an explicit period1/period2 date window instead of `range` —
+        that combination doesn't trigger the monthly-granularity bug."""
         yf_ticker = UAE_YAHOO_MAP.get(self.ticker, self.ticker)
+        period2 = int(datetime.now(tz=timezone.utc).timestamp())
+        period1 = period2 - 30 * 365 * 24 * 60 * 60  # 30 years back
 
         for base in ["https://query1.finance.yahoo.com", "https://query2.finance.yahoo.com"]:
             try:
                 r = requests.get(
-                    f"{base}/v8/finance/chart/{yf_ticker}?interval=1d&range=10y",
+                    f"{base}/v8/finance/chart/{yf_ticker}?interval=1d&period1={period1}&period2={period2}",
                     headers=HDR, timeout=15)
                 if r.status_code != 200:
                     continue
@@ -175,7 +181,8 @@ class DataManager:
         # Fallback: yfinance library (handles cookies/crumb itself)
         try:
             import yfinance as _yf
-            _raw = _yf.download(yf_ticker, period="10y", interval="1d", progress=False, auto_adjust=True)
+            _start = (datetime.now(tz=timezone.utc) - pd.Timedelta(days=30 * 365)).strftime("%Y-%m-%d")
+            _raw = _yf.download(yf_ticker, start=_start, interval="1d", progress=False, auto_adjust=True)
             if _raw is not None and len(_raw) >= 30:
                 _raw = _raw.reset_index()
                 if hasattr(_raw.columns, "levels"):
